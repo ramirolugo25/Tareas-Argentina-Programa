@@ -9,12 +9,22 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <form>
-        <input type="text" id="primer-nombre" placeholder="Primer Nombre">
-        <input type="text" id="segundo-nombre" placeholder="Segundo Nombre">
-        <input type="text" id="apellido" placeholder="Apellido">
-        <input type="number" id="edad" placeholder="Edad">
+    <h1>Bienvenido!</h1>
+    
+    <form id="entrada-bar" onsubmit="return false;">
+        <input type="text" id="nombre-usuario" placeholder="Ingresá tu nombre">
+        <input type="text" id="apellido-usuario" placeholder="Ingresá tu apellido">
+        <input type="number" id="edad-usuario" placeholder="Ingresá tu edad">
+        <input type="submit" value="Ingresar" id="ingresar">
+        
+        
     </form>
+   
+   <br>
+   <br>
+   <div id="datos-usuario"></div>
+    
+   
     
     <script src="tarea2.js"></script>
 </body>
