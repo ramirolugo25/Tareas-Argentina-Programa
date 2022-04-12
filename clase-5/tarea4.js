@@ -11,30 +11,6 @@ const $botonCargar = document.querySelector('#boton-cargar');
 
 $botonCargar.onclick = function(){
 
-    /*
-    const lista = document.querySelectorAll('li');
-    let suma = Number(lista[0].innerText);
-    let numeroMenor = Number(lista[0].innerText);
-    let numeroMayor = Number(lista[0].innerText);
-
-    for(let i=1; i<lista.length; i++){
-        suma = suma + Number(lista[i].innerText);
-        
-        if(Number(lista[i].innerText) < numeroMenor){
-            numeroMenor = Number(lista[i].innerText);
-        }
-        if(Number(lista[i].innerText) > numeroMayor){
-            numeroMayor = Number(lista[i].innerText);
-        }
-    }
-
-    let promedio = suma / lista.length;
-
-    console.log('promedio: '+ promedio);
-    console.log('menor: '+ numeroMenor);
-    console.log('mayor: ' + numeroMayor);
-    */
-
     const lista = document.querySelectorAll('li');
     let arreglo = [];
     let suma = 0;
@@ -71,7 +47,6 @@ $botonCargar.onclick = function(){
     document.querySelector('#numero-pequeño').innerText = `El numero mas pequeño es: ${arreglo[0]}`;
     document.querySelector('#numero-grande').innerText = `El numero mas grande es: ${arreglo[arreglo.length-1]}`;
     document.querySelector('#numero-frecuente').innerText = `El numero mas frecuente es: ${numeroFrecuente}`;
-    
     
     return false;
 
