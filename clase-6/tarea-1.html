@@ -10,22 +10,29 @@
 </head>
 <body>
     <form>
+        <label>Ingrese la cantidad de personas en el grupo familiar</label>
+        <input type="number" id="cantidad-personas">
+        <input type="button" value="Aceptar" id="aceptar">
+
         <div id="integrantes">
 
         </div>
-        <br>
-        <input type="button" value="Calcular" id="boton-calcular">
-        <br>
-        <br>
+        
+        <input type="button" value="Calcular" id="calcular" class="oculto">
+        <input type="reset" value="Empezar de Nuevo" id="empezar-de-nuevo" class="oculto">
+
+        <div id="analisis" class="oculto">
         <label>La mayor edad</label>
         <input type="number" id="mayor-edad" disabled>
         <label>La menor edad</label>
         <input type="number" id="menor-edad" disabled>
         <label>Promedio</label>
-        <input type="number" id="promedio" disabled>
-        <br>
-        <input type="button"  value="Empezar de nuevo" id="empezar-de-nuevo">
+        <input type="number" id="promedio-edad" disabled>
+        </div>
+        
+
     </form>
+    <script type="text/javascript" src='tarea-1-funciones.js'></script>
     <script type="text/javascript" src='tarea-1.js'></script>
 </body>
 </html>
