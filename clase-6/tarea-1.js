@@ -6,46 +6,46 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
-const $botonAceptar = document.querySelector('#aceptar');
+const $botonAceptar = document.querySelector('#boton-aceptar');
 
 $botonAceptar.onclick = function(event){
     
-    ocultarNodo('#analisis');
+    ocultarNodo('#resultados');
     removerIntegrantes();
     const cantidadPersonas = Number(document.querySelector('#cantidad-personas').value);
     if (cantidadPersonas>0){
         crearIntegrantes(cantidadPersonas);
-        mostrarNodo('#calcular');
-        mostrarNodo('#empezar-de-nuevo');
+        mostrarNodo('#boton-calcular');
+        mostrarNodo('#boton-empezar-de-nuevo');
     }
     else{
-        ocultarNodo('#calcular');
-        ocultarNodo('#empezar-de-nuevo');
+        ocultarNodo('#boton-calcular');
+        ocultarNodo('#boton-empezar-de-nuevo');
     }
     event.preventDefault();
 }
 
-const $botonCalcular = document.querySelector('#calcular');
+const $botonCalcular = document.querySelector('#boton-calcular');
 
 $botonCalcular.onclick = function(event){
     
     const edadIntegrantes = devolverEdadIntegrantes(); 
 
-    mostrarAnalisisEdad('mayor', devolverMayorEdad(edadIntegrantes));
-    mostrarAnalisisEdad('menor', devolverMenorEdad(edadIntegrantes));
-    mostrarAnalisisEdad('promedio', devolverPromedioEdad(edadIntegrantes));
-    mostrarNodo('#analisis');
+    mostrarResultadosEdad('mayor', devolverMayorEdad(edadIntegrantes));
+    mostrarResultadosEdad('menor', devolverMenorEdad(edadIntegrantes));
+    mostrarResultadosEdad('promedio', devolverPromedioEdad(edadIntegrantes));
+    mostrarNodo('#resultados');
 
     event.preventDefault();
 }
 
-const $botonEmpezarDeNuevo = document.querySelector('#empezar-de-nuevo');
+const $botonEmpezarDeNuevo = document.querySelector('#boton-empezar-de-nuevo');
 
 $botonEmpezarDeNuevo.onclick = function(event){
     removerIntegrantes();
-    ocultarNodo('#calcular');
-    ocultarNodo('#empezar-de-nuevo');
-    ocultarNodo('#analisis');
+    ocultarNodo('#boton-calcular');
+    ocultarNodo('#boton-empezar-de-nuevo');
+    ocultarNodo('#resultados');
 
     event.preventDefault();
 

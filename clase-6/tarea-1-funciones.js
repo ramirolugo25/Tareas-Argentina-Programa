@@ -8,8 +8,7 @@ function crearIntegrantes(cantidadPersonas){
         $label = document.createElement('label');
         $input = document.createElement('input');
         $input.type = 'number';
-        textoLabel = document.createTextNode(`Edad del integrante ${i}`);
-        $label.appendChild(textoLabel);
+        $label.innerText = `Edad del integrante ${i}`;
         $div.appendChild($label);
         $div.appendChild($input);
         $integrantes.appendChild($div);
@@ -19,7 +18,7 @@ function crearIntegrantes(cantidadPersonas){
 }
 
 function removerIntegrantes(){
-    const $integrantes = document.querySelectorAll('#integrantes .integrante');
+    const $integrantes = document.querySelectorAll('.integrante');
 
     for(let i=0; i<$integrantes.length;i++){
         $integrantes[i].remove();
@@ -56,7 +55,7 @@ function devolverPromedioEdad(edadIntegrantes){
     return (suma / edadIntegrantes.length);
 }
 
-function mostrarAnalisisEdad(identificador,edad){
+function mostrarResultadosEdad(identificador,edad){
     document.querySelector(`#${identificador}-edad`).value = edad;
 }
 
