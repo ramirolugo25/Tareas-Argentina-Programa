@@ -54,7 +54,7 @@ function devolverPromedioSalarioMensual(salarios){
         suma += salarios[i] / 12;
     }
 
-    return suma / salarios.length;
+    return  (suma / salarios.length).toFixed(2);
 }
 
 function mostrarResultados(identificador, resultado){
